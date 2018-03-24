@@ -11,14 +11,20 @@
             </button>
             <a class="page-scroll navbar-brand" href="#intro">{{ .Site.Title }}</a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Collect the nav links, forms, and other content for toggling 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="#profile">Profile</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a class="page-scroll" href="#practice">Practice</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#design">Design Process</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#projects">Projects</a>
                 </li>
                 {{ range where .Data.Pages "Section" "pricing" | first 1 }}
                     <li>
@@ -32,6 +38,7 @@
                 {{ end }}
             </ul>
         </div>
+        -->
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
@@ -46,14 +53,9 @@
 		<div class="row">
 		    <div class="col-lg-12">
 			<div class="intro-message">
-			    <h1>{{ .Site.Title }}</h1>
+			    <h1 hidden="true">{{ .Site.Title }}</h1>
 			    <h3>{{ .Site.Params.description }}</h3>
-			    <hr class="intro-divider">
-			    {{ if isset .Site.Params "social" }}
-			    <ul class="list-inline intro-social-buttons">
-				        {{ partial "social.html" . }}
-			    </ul>
-			    {{ end }}
+			    <hr class="intro-divider" hidden="true">
 			</div>
 		    </div>
 		</div>

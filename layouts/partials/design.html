@@ -1,0 +1,22 @@
+<section id="design">
+
+<!-- Page Content -->
+ {{ range $index, $element :=  .Data.Pages }}{{ if (eq .Section "design") }}
+ 
+    <div class="content-section-b">
+        <div class="container">
+
+            <div class="row">
+                    {{ with .Params.img }}
+                <div class="col-lg-12 col-sm-12">
+                    <img class="img-responsive" src="img/{{ . }}" alt="">
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    {{ end }}
+    {{ end }}
+
+</section>
